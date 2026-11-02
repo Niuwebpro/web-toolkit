@@ -5,7 +5,6 @@ Petits utilitaires WordPress indépendants, simples à installer et à faire év
 | Dossier | Rôle | État |
 | --- | --- | --- |
 | `plugins/dark-mode-toggle/` | Bouton mode sombre : bloc Gutenberg et shortcode | Version initiale 0.1.0 — validation sur WordPress à effectuer |
-| `plugins/category-styles/` | Futurs styles des catégories | Prévu, aucune extension installable |
 | `snippets/` | Exemples CSS indépendants | Exemple de palette clair/sombre |
 | `docs/` | Installation, architecture et vérifications | Disponible |
 
