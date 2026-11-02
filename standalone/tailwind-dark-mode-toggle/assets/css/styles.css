@@ -1,0 +1,34 @@
+/* Custom component styling; layout and colors use Tailwind utilities. */
+.theme-switch__thumb {
+  transform: translateX(0);
+}
+
+.theme-switch__input:checked + .theme-switch__track .theme-switch__thumb {
+  transform: translateX(24px);
+}
+
+.theme-switch__sun,
+.theme-switch__moon {
+  transition: opacity 200ms ease;
+}
+
+.theme-switch__moon {
+  opacity: 0;
+}
+
+.theme-switch__input:checked + .theme-switch__track .theme-switch__sun {
+  opacity: 0;
+}
+
+.theme-switch__input:checked + .theme-switch__track .theme-switch__moon {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -2,6 +2,8 @@
 
 ## Vérifications automatisées
 
+Exécuter les commandes depuis le dossier `wordpress/`.
+
 ```bash
 node --test tests/color-mode.test.cjs
 php -l plugins/dark-mode-toggle/dark-mode-toggle.php

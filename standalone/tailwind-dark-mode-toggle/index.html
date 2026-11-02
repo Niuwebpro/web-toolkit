@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Démo accessible d'un interrupteur clair/sombre avec Tailwind CSS.">
+  <title>Minimal Dark Mode Toggle</title>
+
+  <!-- Intentionally synchronous to set the correct theme before the page renders. -->
+  <script src="assets/js/theme-init.js"></script>
+
+  <!-- Tailwind Play CDN is intended for development and demonstrations only. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/theme.js" defer></script>
+</head>
+<body class="flex min-h-screen items-center justify-center bg-[#f7f7fb] text-slate-900 antialiased transition-colors duration-300 dark:bg-[#17172c] dark:text-white">
+  <main class="p-8 text-center">
+    <h1 class="mb-8 text-xl font-semibold tracking-tight">Dark mode toggle</h1>
+
+    <label class="inline-flex cursor-pointer select-none items-center gap-4">
+      <input
+        id="theme-toggle"
+        type="checkbox"
+        role="switch"
+        aria-label="Activer le mode sombre"
+        class="theme-switch__input peer sr-only"
+      >
+      <span
+        aria-hidden="true"
+        class="theme-switch__track relative inline-block h-8 w-14 rounded-full bg-slate-200 transition-colors duration-300 peer-checked:bg-violet-600 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-violet-500"
+      >
+        <svg class="theme-switch__sun absolute left-2 top-2 h-4 w-4 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="theme-switch__moon absolute right-2 top-2 h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+        </svg>
+        <span class="theme-switch__thumb absolute left-1 top-1 h-6 w-6 rounded-full bg-white shadow-sm transition-transform duration-300"></span>
+      </span>
+      <span class="text-sm font-medium">Mode sombre</span>
+    </label>
+
+    <p class="mt-8 text-xs text-slate-500 dark:text-slate-400">
+      Votre préférence est enregistrée sur cet appareil.
+    </p>
+  </main>
+</body>
+</html>

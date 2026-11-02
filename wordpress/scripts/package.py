@@ -4,7 +4,7 @@ import json
 import zipfile
 
 root = Path(__file__).resolve().parents[1]
-output = root / "dist"
+output = root / "downloads"
 output.mkdir(exist_ok=True)
 for slug in ["dark-mode-toggle"]:
     plugin = root / "plugins" / slug
@@ -14,5 +14,5 @@ for slug in ["dark-mode-toggle"]:
         for source in sorted(plugin.rglob("*")):
             if source.is_file():
                 archive.write(source, Path(slug) / source.relative_to(plugin))
-        archive.write(root / "LICENSE", Path(slug) / "LICENSE")
+        archive.write(root.parent / "LICENSE", Path(slug) / "LICENSE")
     print(destination)

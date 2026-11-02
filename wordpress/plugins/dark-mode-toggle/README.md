@@ -14,7 +14,7 @@ Bloc Gutenberg `wordpress-toolkit/dark-mode-toggle` et shortcode `[dark_mode_tog
 
 Le mode effectif est exposé par `data-wpt-color-mode="dark"` ou `"light"` sur `<html>`. La préférence ne change pas l’administration WordPress. L’éditeur affiche un aperçu statique du contrôle.
 
-L’extension ne recolore pas automatiquement le thème. Voir `docs/installation.md` à la racine du dépôt. Pas de suivi, de requête externe, de paramètre en base de données ni de mécanisme de mises à jour depuis GitHub.
+L’extension ne recolore pas automatiquement le thème. Voir [le guide d’installation](../../docs/installation.md). Pas de suivi, de requête externe, de paramètre en base de données ni de mécanisme de mises à jour depuis GitHub.
 
 Si le bloc est inséré après le chargement par un système AJAX, ce cas n’est pas pris en charge dans cette version. Les pages, modèles FSE et shortcodes rendus côté serveur sont le périmètre initial.
 
