@@ -1,0 +1,12 @@
+.wpt-dark-mode { --wpt-toggle-accent: #6d28d9; display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.wpt-dark-mode .wpt-dark-mode__switch, .wpt-dark-mode .wpt-dark-mode__system { font: inherit; color: inherit; cursor: pointer; min-height: 44px; }
+.wpt-dark-mode .wpt-dark-mode__switch { display: inline-flex; align-items: center; gap: .65rem; border: 0; padding: 0; background: transparent; }
+.wpt-dark-mode [hidden] { display: none !important; }
+.wpt-dark-mode .wpt-dark-mode__track { box-sizing: border-box; display: inline-block; position: relative; width: 56px; height: 32px; flex: 0 0 56px; border-radius: 999px; background: #64748b; transition: background .2s; }
+.wpt-dark-mode .wpt-dark-mode__thumb { position: absolute; width: 24px; height: 24px; inset-inline-start: 4px; top: 4px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px #0003; transition: inset-inline-start .2s; }
+.wpt-dark-mode [aria-checked="true"] .wpt-dark-mode__track { background: var(--wpt-toggle-accent); }
+.wpt-dark-mode [aria-checked="true"] .wpt-dark-mode__thumb { inset-inline-start: 28px; }
+.wpt-dark-mode .wpt-dark-mode__system { border: 1px solid currentColor; border-radius: .4rem; padding: .35rem .65rem; background: transparent; font-size: .875em; }
+.wpt-dark-mode [aria-pressed="true"] { text-decoration: underline; text-underline-offset: .2em; }
+.wpt-dark-mode button:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .wpt-dark-mode .wpt-dark-mode__track, .wpt-dark-mode .wpt-dark-mode__thumb { transition: none; } }

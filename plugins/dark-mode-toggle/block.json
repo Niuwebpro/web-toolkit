@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wordpress-toolkit/dark-mode-toggle",
+  "version": "0.1.0",
+  "title": "Bouton mode sombre",
+  "category": "widgets",
+  "icon": "lightbulb",
+  "description": "Choix clair, sombre et système. Nécessite une palette adaptée dans le thème.",
+  "textdomain": "dark-mode-toggle",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Mode sombre"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "wpt-dark-mode-editor",
+  "style": "wpt-dark-mode"
+}
