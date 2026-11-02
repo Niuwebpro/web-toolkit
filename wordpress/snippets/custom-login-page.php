@@ -22,7 +22,7 @@ add_action('login_enqueue_scripts', function() {
             background-size: contain;
             width: 300px;
             height: 100px;
-            background-image: url('https://niuweb.fr/wp-content/uploads/2026/06/logo-liquid-glass-mini-e1782570601920.webp');
+            background-image: url('IMG_URL');
         }
 
         .login form {
