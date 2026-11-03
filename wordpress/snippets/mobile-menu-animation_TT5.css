@@ -1,0 +1,65 @@
+/* === MOBILE MENU ANIMATION === */
+
+/* Slide the menu container in from the right. */
+.wp-block-navigation__responsive-container.is-menu-open {
+  animation: menuSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in menu items as they move upward. */
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item {
+  opacity: 0;
+  animation: linkFadeUp 0.4s ease forwards;
+}
+
+/* Stagger the first five menu items by 0.1s each. */
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item:nth-child(1) { animation-delay: 0.15s; }
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item:nth-child(2) { animation-delay: 0.25s; }
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item:nth-child(3) { animation-delay: 0.35s; }
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item:nth-child(4) { animation-delay: 0.45s; }
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__container
+  > .wp-block-navigation-item:nth-child(5) { animation-delay: 0.55s; }
+
+@keyframes linkFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gently fade in the site logo, title, and tagline. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-site-logo,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-site-title,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-site-tagline {
+  opacity: 0;
+  animation: fadeIn 0.5s ease 0.1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
